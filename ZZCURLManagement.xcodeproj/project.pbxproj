@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		367AD92D22007F270020E425 /* ZZCHTTPRequestMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 367AD92622007F270020E425 /* ZZCHTTPRequestMaker.m */; };
+		367AD92E22007F270020E425 /* ZZCHTTPSessionSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 367AD92722007F270020E425 /* ZZCHTTPSessionSignal.m */; };
+		367AD92F22007F270020E425 /* ZZCHTTPRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 367AD92922007F270020E425 /* ZZCHTTPRequestConfig.m */; };
+		367AD93022007F270020E425 /* ZZCHTTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 367AD92C22007F270020E425 /* ZZCHTTPSession.m */; };
+		367AD93322007FBC0020E425 /* modelsssss.m in Sources */ = {isa = PBXBuildFile; fileRef = 367AD93222007FBC0020E425 /* modelsssss.m */; };
+		36906EDE21CB408A00C1AED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36906EDD21CB408A00C1AED1 /* AppDelegate.m */; };
+		36906EE121CB408A00C1AED1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36906EE021CB408A00C1AED1 /* ViewController.m */; };
+		36906EE421CB408B00C1AED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36906EE221CB408A00C1AED1 /* Main.storyboard */; };
+		36906EE621CB408C00C1AED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36906EE521CB408C00C1AED1 /* Assets.xcassets */; };
+		36906EE921CB408C00C1AED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36906EE721CB408C00C1AED1 /* LaunchScreen.storyboard */; };
+		36906EEC21CB408C00C1AED1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36906EEB21CB408C00C1AED1 /* main.m */; };
+		36906EF621CB408C00C1AED1 /* ZZCURLManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36906EF521CB408C00C1AED1 /* ZZCURLManagementTests.m */; };
+		36906F0121CB408C00C1AED1 /* ZZCURLManagementUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36906F0021CB408C00C1AED1 /* ZZCURLManagementUITests.m */; };
+		36A5457221FABBF90066A9D4 /* ZZCURLRelativeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A5456D21FABBF90066A9D4 /* ZZCURLRelativeItem.m */; };
+		36A5457321FABBF90066A9D4 /* ZZCURLManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A5456E21FABBF90066A9D4 /* ZZCURLManagement.m */; };
+		36A5457421FABBF90066A9D4 /* ZZCURLBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A5456F21FABBF90066A9D4 /* ZZCURLBaseItem.m */; };
+		36A5457721FABC100066A9D4 /* ZZCAutoLock.mm in Sources */ = {isa = PBXBuildFile; fileRef = 36A5457521FABC100066A9D4 /* ZZCAutoLock.mm */; };
+		36CE0A8E21D76948008DF092 /* ZZCURLConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CE0A8D21D76948008DF092 /* ZZCURLConfigure.m */; };
+		36D1141A2201A35B005D6856 /* zjq_home_static_details in Resources */ = {isa = PBXBuildFile; fileRef = 36D114192201A35B005D6856 /* zjq_home_static_details */; };
+		D3FADC8AAF5BFCE0600928FE /* Pods_ZZCURLManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C1A26D6D36A794807F0B9A /* Pods_ZZCURLManagement.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36906EF221CB408C00C1AED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36906ED121CB408A00C1AED1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36906ED821CB408A00C1AED1;
+			remoteInfo = ZZCURLManagement;
+		};
+		36906EFD21CB408C00C1AED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36906ED121CB408A00C1AED1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36906ED821CB408A00C1AED1;
+			remoteInfo = ZZCURLManagement;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		367AD92522007F270020E425 /* ZZCHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCHTTPRequestConfig.h; sourceTree = "<group>"; };
+		367AD92622007F270020E425 /* ZZCHTTPRequestMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCHTTPRequestMaker.m; sourceTree = "<group>"; };
+		367AD92722007F270020E425 /* ZZCHTTPSessionSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCHTTPSessionSignal.m; sourceTree = "<group>"; };
+		367AD92822007F270020E425 /* ZZCHTTPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCHTTPSession.h; sourceTree = "<group>"; };
+		367AD92922007F270020E425 /* ZZCHTTPRequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCHTTPRequestConfig.m; sourceTree = "<group>"; };
+		367AD92A22007F270020E425 /* ZZCHTTPSessionSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCHTTPSessionSignal.h; sourceTree = "<group>"; };
+		367AD92B22007F270020E425 /* ZZCHTTPRequestMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCHTTPRequestMaker.h; sourceTree = "<group>"; };
+		367AD92C22007F270020E425 /* ZZCHTTPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCHTTPSession.m; sourceTree = "<group>"; };
+		367AD93122007FBC0020E425 /* modelsssss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modelsssss.h; sourceTree = "<group>"; };
+		367AD93222007FBC0020E425 /* modelsssss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = modelsssss.m; sourceTree = "<group>"; };
+		36906ED921CB408A00C1AED1 /* ZZCURLManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZCURLManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36906EDC21CB408A00C1AED1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		36906EDD21CB408A00C1AED1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36906EDF21CB408A00C1AED1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		36906EE021CB408A00C1AED1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36906EE321CB408B00C1AED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		36906EE521CB408C00C1AED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36906EE821CB408C00C1AED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		36906EEA21CB408C00C1AED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36906EEB21CB408C00C1AED1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		36906EF121CB408C00C1AED1 /* ZZCURLManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZCURLManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36906EF521CB408C00C1AED1 /* ZZCURLManagementTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCURLManagementTests.m; sourceTree = "<group>"; };
+		36906EF721CB408C00C1AED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36906EFC21CB408C00C1AED1 /* ZZCURLManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZCURLManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36906F0021CB408C00C1AED1 /* ZZCURLManagementUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCURLManagementUITests.m; sourceTree = "<group>"; };
+		36906F0221CB408C00C1AED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A5456C21FABBF90066A9D4 /* ZZCURLBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCURLBaseItem.h; sourceTree = "<group>"; };
+		36A5456D21FABBF90066A9D4 /* ZZCURLRelativeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCURLRelativeItem.m; sourceTree = "<group>"; };
+		36A5456E21FABBF90066A9D4 /* ZZCURLManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCURLManagement.m; sourceTree = "<group>"; };
+		36A5456F21FABBF90066A9D4 /* ZZCURLBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCURLBaseItem.m; sourceTree = "<group>"; };
+		36A5457021FABBF90066A9D4 /* ZZCURLRelativeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCURLRelativeItem.h; sourceTree = "<group>"; };
+		36A5457121FABBF90066A9D4 /* ZZCURLManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCURLManagement.h; sourceTree = "<group>"; };
+		36A5457521FABC100066A9D4 /* ZZCAutoLock.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZZCAutoLock.mm; sourceTree = "<group>"; };
+		36A5457621FABC100066A9D4 /* ZZCAutoLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCAutoLock.h; sourceTree = "<group>"; };
+		36CE0A8C21D76948008DF092 /* ZZCURLConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCURLConfigure.h; sourceTree = "<group>"; };
+		36CE0A8D21D76948008DF092 /* ZZCURLConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCURLConfigure.m; sourceTree = "<group>"; };
+		36CE0A8F21D7C542008DF092 /* ZZCHTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCHTTP.h; sourceTree = "<group>"; };
+		36D114192201A35B005D6856 /* zjq_home_static_details */ = {isa = PBXFileReference; lastKnownFileType = text; path = zjq_home_static_details; sourceTree = "<group>"; };
+		446EEB885B02B7562EFEBB62 /* Pods-ZZCURLManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZCURLManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZZCURLManagement/Pods-ZZCURLManagement.release.xcconfig"; sourceTree = "<group>"; };
+		B50023F584554C76C31F009C /* Pods-ZZCURLManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZCURLManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZCURLManagement/Pods-ZZCURLManagement.debug.xcconfig"; sourceTree = "<group>"; };
+		F6C1A26D6D36A794807F0B9A /* Pods_ZZCURLManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZCURLManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36906ED621CB408A00C1AED1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FADC8AAF5BFCE0600928FE /* Pods_ZZCURLManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36906EEE21CB408C00C1AED1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36906EF921CB408C00C1AED1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36265FC021D6236F00B8EB35 /* ZZCHTTPManager */ = {
+			isa = PBXGroup;
+			children = (
+				36CE0A8F21D7C542008DF092 /* ZZCHTTP.h */,
+				36A5457621FABC100066A9D4 /* ZZCAutoLock.h */,
+				36A5457521FABC100066A9D4 /* ZZCAutoLock.mm */,
+				36A5457821FB15A70066A9D4 /* ZZCURLLoadManagement */,
+				36A5456B21FABBF90066A9D4 /* ZZCURLManagement */,
+			);
+			path = ZZCHTTPManager;
+			sourceTree = "<group>";
+		};
+		36906ED021CB408A00C1AED1 = {
+			isa = PBXGroup;
+			children = (
+				36906EDB21CB408A00C1AED1 /* ZZCURLManagement */,
+				36906EF421CB408C00C1AED1 /* ZZCURLManagementTests */,
+				36906EFF21CB408C00C1AED1 /* ZZCURLManagementUITests */,
+				36906EDA21CB408A00C1AED1 /* Products */,
+				7046719D0DE97D92FDA1C83A /* Pods */,
+				76643DF7FF3CB30843E462AB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		36906EDA21CB408A00C1AED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36906ED921CB408A00C1AED1 /* ZZCURLManagement.app */,
+				36906EF121CB408C00C1AED1 /* ZZCURLManagementTests.xctest */,
+				36906EFC21CB408C00C1AED1 /* ZZCURLManagementUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36906EDB21CB408A00C1AED1 /* ZZCURLManagement */ = {
+			isa = PBXGroup;
+			children = (
+				36906EDC21CB408A00C1AED1 /* AppDelegate.h */,
+				36906EDD21CB408A00C1AED1 /* AppDelegate.m */,
+				36906EDF21CB408A00C1AED1 /* ViewController.h */,
+				36906EE021CB408A00C1AED1 /* ViewController.m */,
+				367AD93122007FBC0020E425 /* modelsssss.h */,
+				367AD93222007FBC0020E425 /* modelsssss.m */,
+				36CE0A8C21D76948008DF092 /* ZZCURLConfigure.h */,
+				36CE0A8D21D76948008DF092 /* ZZCURLConfigure.m */,
+				36D114112201A014005D6856 /* FakeJsonStringFile */,
+				36265FC021D6236F00B8EB35 /* ZZCHTTPManager */,
+				36906EE221CB408A00C1AED1 /* Main.storyboard */,
+				36906EE521CB408C00C1AED1 /* Assets.xcassets */,
+				36906EE721CB408C00C1AED1 /* LaunchScreen.storyboard */,
+				36906EEA21CB408C00C1AED1 /* Info.plist */,
+				36906EEB21CB408C00C1AED1 /* main.m */,
+			);
+			path = ZZCURLManagement;
+			sourceTree = "<group>";
+		};
+		36906EF421CB408C00C1AED1 /* ZZCURLManagementTests */ = {
+			isa = PBXGroup;
+			children = (
+				36906EF521CB408C00C1AED1 /* ZZCURLManagementTests.m */,
+				36906EF721CB408C00C1AED1 /* Info.plist */,
+			);
+			path = ZZCURLManagementTests;
+			sourceTree = "<group>";
+		};
+		36906EFF21CB408C00C1AED1 /* ZZCURLManagementUITests */ = {
+			isa = PBXGroup;
+			children = (
+				36906F0021CB408C00C1AED1 /* ZZCURLManagementUITests.m */,
+				36906F0221CB408C00C1AED1 /* Info.plist */,
+			);
+			path = ZZCURLManagementUITests;
+			sourceTree = "<group>";
+		};
+		36A5456B21FABBF90066A9D4 /* ZZCURLManagement */ = {
+			isa = PBXGroup;
+			children = (
+				36A5457121FABBF90066A9D4 /* ZZCURLManagement.h */,
+				36A5456E21FABBF90066A9D4 /* ZZCURLManagement.m */,
+				36A5456C21FABBF90066A9D4 /* ZZCURLBaseItem.h */,
+				36A5456F21FABBF90066A9D4 /* ZZCURLBaseItem.m */,
+				36A5457021FABBF90066A9D4 /* ZZCURLRelativeItem.h */,
+				36A5456D21FABBF90066A9D4 /* ZZCURLRelativeItem.m */,
+			);
+			path = ZZCURLManagement;
+			sourceTree = "<group>";
+		};
+		36A5457821FB15A70066A9D4 /* ZZCURLLoadManagement */ = {
+			isa = PBXGroup;
+			children = (
+				367AD92522007F270020E425 /* ZZCHTTPRequestConfig.h */,
+				367AD92922007F270020E425 /* ZZCHTTPRequestConfig.m */,
+				367AD92B22007F270020E425 /* ZZCHTTPRequestMaker.h */,
+				367AD92622007F270020E425 /* ZZCHTTPRequestMaker.m */,
+				367AD92822007F270020E425 /* ZZCHTTPSession.h */,
+				367AD92C22007F270020E425 /* ZZCHTTPSession.m */,
+				367AD92A22007F270020E425 /* ZZCHTTPSessionSignal.h */,
+				367AD92722007F270020E425 /* ZZCHTTPSessionSignal.m */,
+			);
+			path = ZZCURLLoadManagement;
+			sourceTree = "<group>";
+		};
+		36D114112201A014005D6856 /* FakeJsonStringFile */ = {
+			isa = PBXGroup;
+			children = (
+				36D114192201A35B005D6856 /* zjq_home_static_details */,
+			);
+			path = FakeJsonStringFile;
+			sourceTree = "<group>";
+		};
+		7046719D0DE97D92FDA1C83A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B50023F584554C76C31F009C /* Pods-ZZCURLManagement.debug.xcconfig */,
+				446EEB885B02B7562EFEBB62 /* Pods-ZZCURLManagement.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		76643DF7FF3CB30843E462AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6C1A26D6D36A794807F0B9A /* Pods_ZZCURLManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36906ED821CB408A00C1AED1 /* ZZCURLManagement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36906F0521CB408C00C1AED1 /* Build configuration list for PBXNativeTarget "ZZCURLManagement" */;
+			buildPhases = (
+				F15056C7ADF448F1C2BF8940 /* [CP] Check Pods Manifest.lock */,
+				36906ED521CB408A00C1AED1 /* Sources */,
+				36906ED621CB408A00C1AED1 /* Frameworks */,
+				36906ED721CB408A00C1AED1 /* Resources */,
+				FA48F659BC406980CC683B40 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZZCURLManagement;
+			productName = ZZCURLManagement;
+			productReference = 36906ED921CB408A00C1AED1 /* ZZCURLManagement.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36906EF021CB408C00C1AED1 /* ZZCURLManagementTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36906F0821CB408C00C1AED1 /* Build configuration list for PBXNativeTarget "ZZCURLManagementTests" */;
+			buildPhases = (
+				36906EED21CB408C00C1AED1 /* Sources */,
+				36906EEE21CB408C00C1AED1 /* Frameworks */,
+				36906EEF21CB408C00C1AED1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36906EF321CB408C00C1AED1 /* PBXTargetDependency */,
+			);
+			name = ZZCURLManagementTests;
+			productName = ZZCURLManagementTests;
+			productReference = 36906EF121CB408C00C1AED1 /* ZZCURLManagementTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		36906EFB21CB408C00C1AED1 /* ZZCURLManagementUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36906F0B21CB408C00C1AED1 /* Build configuration list for PBXNativeTarget "ZZCURLManagementUITests" */;
+			buildPhases = (
+				36906EF821CB408C00C1AED1 /* Sources */,
+				36906EF921CB408C00C1AED1 /* Frameworks */,
+				36906EFA21CB408C00C1AED1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36906EFE21CB408C00C1AED1 /* PBXTargetDependency */,
+			);
+			name = ZZCURLManagementUITests;
+			productName = ZZCURLManagementUITests;
+			productReference = 36906EFC21CB408C00C1AED1 /* ZZCURLManagementUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36906ED121CB408A00C1AED1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = lzy;
+				TargetAttributes = {
+					36906ED821CB408A00C1AED1 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					36906EF021CB408C00C1AED1 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 36906ED821CB408A00C1AED1;
+					};
+					36906EFB21CB408C00C1AED1 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 36906ED821CB408A00C1AED1;
+					};
+				};
+			};
+			buildConfigurationList = 36906ED421CB408A00C1AED1 /* Build configuration list for PBXProject "ZZCURLManagement" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36906ED021CB408A00C1AED1;
+			productRefGroup = 36906EDA21CB408A00C1AED1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36906ED821CB408A00C1AED1 /* ZZCURLManagement */,
+				36906EF021CB408C00C1AED1 /* ZZCURLManagementTests */,
+				36906EFB21CB408C00C1AED1 /* ZZCURLManagementUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36906ED721CB408A00C1AED1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36906EE921CB408C00C1AED1 /* LaunchScreen.storyboard in Resources */,
+				36906EE621CB408C00C1AED1 /* Assets.xcassets in Resources */,
+				36906EE421CB408B00C1AED1 /* Main.storyboard in Resources */,
+				36D1141A2201A35B005D6856 /* zjq_home_static_details in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36906EEF21CB408C00C1AED1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36906EFA21CB408C00C1AED1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F15056C7ADF448F1C2BF8940 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZZCURLManagement-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA48F659BC406980CC683B40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZZCURLManagement/Pods-ZZCURLManagement-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/ZZCDevelopKit/ZZCDevelopKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZCDevelopKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZZCURLManagement/Pods-ZZCURLManagement-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36906ED521CB408A00C1AED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				367AD93022007F270020E425 /* ZZCHTTPSession.m in Sources */,
+				36906EE121CB408A00C1AED1 /* ViewController.m in Sources */,
+				36906EEC21CB408C00C1AED1 /* main.m in Sources */,
+				36A5457321FABBF90066A9D4 /* ZZCURLManagement.m in Sources */,
+				367AD92D22007F270020E425 /* ZZCHTTPRequestMaker.m in Sources */,
+				367AD92F22007F270020E425 /* ZZCHTTPRequestConfig.m in Sources */,
+				367AD93322007FBC0020E425 /* modelsssss.m in Sources */,
+				367AD92E22007F270020E425 /* ZZCHTTPSessionSignal.m in Sources */,
+				36A5457421FABBF90066A9D4 /* ZZCURLBaseItem.m in Sources */,
+				36CE0A8E21D76948008DF092 /* ZZCURLConfigure.m in Sources */,
+				36A5457221FABBF90066A9D4 /* ZZCURLRelativeItem.m in Sources */,
+				36906EDE21CB408A00C1AED1 /* AppDelegate.m in Sources */,
+				36A5457721FABC100066A9D4 /* ZZCAutoLock.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36906EED21CB408C00C1AED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36906EF621CB408C00C1AED1 /* ZZCURLManagementTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36906EF821CB408C00C1AED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36906F0121CB408C00C1AED1 /* ZZCURLManagementUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36906EF321CB408C00C1AED1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36906ED821CB408A00C1AED1 /* ZZCURLManagement */;
+			targetProxy = 36906EF221CB408C00C1AED1 /* PBXContainerItemProxy */;
+		};
+		36906EFE21CB408C00C1AED1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36906ED821CB408A00C1AED1 /* ZZCURLManagement */;
+			targetProxy = 36906EFD21CB408C00C1AED1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36906EE221CB408A00C1AED1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36906EE321CB408B00C1AED1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		36906EE721CB408C00C1AED1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36906EE821CB408C00C1AED1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36906F0321CB408C00C1AED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		36906F0421CB408C00C1AED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36906F0621CB408C00C1AED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B50023F584554C76C31F009C /* Pods-ZZCURLManagement.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVNM4ESZ25;
+				INFOPLIST_FILE = ZZCURLManagement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.ZZCURLManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36906F0721CB408C00C1AED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 446EEB885B02B7562EFEBB62 /* Pods-ZZCURLManagement.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVNM4ESZ25;
+				INFOPLIST_FILE = ZZCURLManagement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.ZZCURLManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		36906F0921CB408C00C1AED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVNM4ESZ25;
+				INFOPLIST_FILE = ZZCURLManagementTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.ZZCURLManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZCURLManagement.app/ZZCURLManagement";
+			};
+			name = Debug;
+		};
+		36906F0A21CB408C00C1AED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVNM4ESZ25;
+				INFOPLIST_FILE = ZZCURLManagementTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.ZZCURLManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZCURLManagement.app/ZZCURLManagement";
+			};
+			name = Release;
+		};
+		36906F0C21CB408C00C1AED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVNM4ESZ25;
+				INFOPLIST_FILE = ZZCURLManagementUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.ZZCURLManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZZCURLManagement;
+			};
+			name = Debug;
+		};
+		36906F0D21CB408C00C1AED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WVNM4ESZ25;
+				INFOPLIST_FILE = ZZCURLManagementUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.ZZCURLManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZZCURLManagement;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36906ED421CB408A00C1AED1 /* Build configuration list for PBXProject "ZZCURLManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36906F0321CB408C00C1AED1 /* Debug */,
+				36906F0421CB408C00C1AED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36906F0521CB408C00C1AED1 /* Build configuration list for PBXNativeTarget "ZZCURLManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36906F0621CB408C00C1AED1 /* Debug */,
+				36906F0721CB408C00C1AED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36906F0821CB408C00C1AED1 /* Build configuration list for PBXNativeTarget "ZZCURLManagementTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36906F0921CB408C00C1AED1 /* Debug */,
+				36906F0A21CB408C00C1AED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36906F0B21CB408C00C1AED1 /* Build configuration list for PBXNativeTarget "ZZCURLManagementUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36906F0C21CB408C00C1AED1 /* Debug */,
+				36906F0D21CB408C00C1AED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36906ED121CB408A00C1AED1 /* Project object */;
+}

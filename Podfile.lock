@@ -1,0 +1,82 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.15.1)
+  - Reachability (3.2)
+  - ZZCDevelopKit (0.0.3):
+    - ZZCDevelopKit/Color (= 0.0.3)
+    - ZZCDevelopKit/Data (= 0.0.3)
+    - ZZCDevelopKit/Define (= 0.0.3)
+    - ZZCDevelopKit/Font (= 0.0.3)
+    - ZZCDevelopKit/Http (= 0.0.3)
+    - ZZCDevelopKit/Image (= 0.0.3)
+    - ZZCDevelopKit/PageMenu (= 0.0.3)
+    - ZZCDevelopKit/Path (= 0.0.3)
+    - ZZCDevelopKit/Singleton (= 0.0.3)
+    - ZZCDevelopKit/Swizzle (= 0.0.3)
+    - ZZCDevelopKit/View (= 0.0.3)
+    - ZZCDevelopKit/Window (= 0.0.3)
+  - ZZCDevelopKit/Color (0.0.3)
+  - ZZCDevelopKit/Data (0.0.3)
+  - ZZCDevelopKit/Define (0.0.3)
+  - ZZCDevelopKit/Font (0.0.3)
+  - ZZCDevelopKit/Http (0.0.3):
+    - AFNetworking
+    - Reachability
+  - ZZCDevelopKit/Image (0.0.3)
+  - ZZCDevelopKit/PageMenu (0.0.3)
+  - ZZCDevelopKit/Path (0.0.3)
+  - ZZCDevelopKit/Singleton (0.0.3)
+  - ZZCDevelopKit/Swizzle (0.0.3)
+  - ZZCDevelopKit/View (0.0.3):
+    - Masonry
+    - MBProgressHUD
+  - ZZCDevelopKit/Window (0.0.3)
+
+DEPENDENCIES:
+  - MJExtension (~> 3.0.15.1)
+  - "ZZCDevelopKit (from `ssh://git@120.79.86.56:10022/zuzuche_ios_library/ZZCDevelopKit.git`)"
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - Reachability
+
+EXTERNAL SOURCES:
+  ZZCDevelopKit:
+    :git: "ssh://git@120.79.86.56:10022/zuzuche_ios_library/ZZCDevelopKit.git"
+
+CHECKOUT OPTIONS:
+  ZZCDevelopKit:
+    :commit: 746a9ba43abf2ba92ca93fd1a680b389159efaa3
+    :git: "ssh://git@120.79.86.56:10022/zuzuche_ios_library/ZZCDevelopKit.git"
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ZZCDevelopKit: 05912dca791e607704db514da8570bd796025557
+
+PODFILE CHECKSUM: 7c6ccce712b46f120ba243161fa044f0c12de945
+
+COCOAPODS: 1.5.0
