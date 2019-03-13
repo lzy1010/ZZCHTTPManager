@@ -30,22 +30,19 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)registerBodyParameter:(NSDictionary<NSString *,NSString *> *)parameter;
 
-
-/**
- 创建请求signal
- 
- @param makeBlock 配置请求
- @return signal
- */
-- (ZZCHTTPSessionSignal *)createSessionSignal:(void(^)(ZZCHTTPRequestMaker *make))makeBlock;
-
-
-@property (strong, nonatomic, readonly) NSString *cacheDirec;
-
 /**
  清除所有的缓存
  */
 - (void)cleanAllHTTPModelData;
+
+/**
+ 清除所有的在线缓存
+ */
+- (void)cleanAllOlCacheData;
+
+@property (strong, nonatomic, readonly) NSString *cacheDirec;
+
+@property (assign, nonatomic) BOOL debug;
 
 @end
 
@@ -59,15 +56,5 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
-@interface ZZCHTTPCompletionDataModel : NSObject
-
-@property (strong, nonatomic) NSString *url_id;
-
-@property (strong, nonatomic) id responseObject;
-
-@property (strong, nonatomic)  NSError *error;
-
-@end
 
 NS_ASSUME_NONNULL_END

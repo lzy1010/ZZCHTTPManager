@@ -1,6 +1,0 @@
-framework module ZZCDevelopKit {
-  umbrella header "ZZCDevelopKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

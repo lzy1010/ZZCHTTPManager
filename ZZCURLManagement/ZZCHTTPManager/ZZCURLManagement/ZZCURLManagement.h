@@ -65,6 +65,12 @@ typedef NS_ENUM(NSUInteger, ZZCURLEnvironmentState) {
  */
 - (NSArray<NSString *> *)getAllUrlString;
 
+/**
+ 外部设置环境
+ 
+ @param dev true：dev    false：正式环境
+ */
+- (void)setEnviStateIfDev:(BOOL)dev;
 
 /**
  切换环境

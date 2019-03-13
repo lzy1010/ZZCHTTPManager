@@ -11,7 +11,6 @@
 		367AD92E22007F270020E425 /* ZZCHTTPSessionSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 367AD92722007F270020E425 /* ZZCHTTPSessionSignal.m */; };
 		367AD92F22007F270020E425 /* ZZCHTTPRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 367AD92922007F270020E425 /* ZZCHTTPRequestConfig.m */; };
 		367AD93022007F270020E425 /* ZZCHTTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 367AD92C22007F270020E425 /* ZZCHTTPSession.m */; };
-		367AD93322007FBC0020E425 /* modelsssss.m in Sources */ = {isa = PBXBuildFile; fileRef = 367AD93222007FBC0020E425 /* modelsssss.m */; };
 		36906EDE21CB408A00C1AED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36906EDD21CB408A00C1AED1 /* AppDelegate.m */; };
 		36906EE121CB408A00C1AED1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36906EE021CB408A00C1AED1 /* ViewController.m */; };
 		36906EE421CB408B00C1AED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36906EE221CB408A00C1AED1 /* Main.storyboard */; };
@@ -24,8 +23,16 @@
 		36A5457321FABBF90066A9D4 /* ZZCURLManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A5456E21FABBF90066A9D4 /* ZZCURLManagement.m */; };
 		36A5457421FABBF90066A9D4 /* ZZCURLBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A5456F21FABBF90066A9D4 /* ZZCURLBaseItem.m */; };
 		36A5457721FABC100066A9D4 /* ZZCAutoLock.mm in Sources */ = {isa = PBXBuildFile; fileRef = 36A5457521FABC100066A9D4 /* ZZCAutoLock.mm */; };
-		36CE0A8E21D76948008DF092 /* ZZCURLConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CE0A8D21D76948008DF092 /* ZZCURLConfigure.m */; };
+		36B38FC12226BBFA006C0E92 /* ZZCHTTPCompletionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B38FC02226BBFA006C0E92 /* ZZCHTTPCompletionDataModel.m */; };
+		36B38FC92226C976006C0E92 /* ZZCBannerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B38FC52226C976006C0E92 /* ZZCBannerInfo.m */; };
+		36B38FCA2226C976006C0E92 /* ZZCMenuItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B38FC62226C976006C0E92 /* ZZCMenuItemList.m */; };
+		36B38FCB2226C976006C0E92 /* ZZCHomeBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B38FC72226C976006C0E92 /* ZZCHomeBaseInfo.m */; };
+		36C1753D2236159A0066A664 /* ZZCHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C1753C2236159A0066A664 /* ZZCHTTPServer.m */; };
+		36C1754022361A9D0066A664 /* ZZCHTTPServer+Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C1753F22361A9D0066A664 /* ZZCHTTPServer+Home.m */; };
 		36D1141A2201A35B005D6856 /* zjq_home_static_details in Resources */ = {isa = PBXBuildFile; fileRef = 36D114192201A35B005D6856 /* zjq_home_static_details */; };
+		36EC70162227DD6E00939791 /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EC70122227DD6E00939791 /* NSData+Encryption.m */; };
+		36EC70172227DD6E00939791 /* UIDevice+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EC70132227DD6E00939791 /* UIDevice+User.m */; };
+		36EC701A2228DB8200939791 /* ZZCHTTPSession+TantuApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EC70192228DB8200939791 /* ZZCHTTPSession+TantuApi.m */; };
 		D3FADC8AAF5BFCE0600928FE /* Pods_ZZCURLManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C1A26D6D36A794807F0B9A /* Pods_ZZCURLManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +62,6 @@
 		367AD92A22007F270020E425 /* ZZCHTTPSessionSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCHTTPSessionSignal.h; sourceTree = "<group>"; };
 		367AD92B22007F270020E425 /* ZZCHTTPRequestMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCHTTPRequestMaker.h; sourceTree = "<group>"; };
 		367AD92C22007F270020E425 /* ZZCHTTPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCHTTPSession.m; sourceTree = "<group>"; };
-		367AD93122007FBC0020E425 /* modelsssss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modelsssss.h; sourceTree = "<group>"; };
-		367AD93222007FBC0020E425 /* modelsssss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = modelsssss.m; sourceTree = "<group>"; };
 		36906ED921CB408A00C1AED1 /* ZZCURLManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZCURLManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36906EDC21CB408A00C1AED1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36906EDD21CB408A00C1AED1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,10 +86,26 @@
 		36A5457121FABBF90066A9D4 /* ZZCURLManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCURLManagement.h; sourceTree = "<group>"; };
 		36A5457521FABC100066A9D4 /* ZZCAutoLock.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZZCAutoLock.mm; sourceTree = "<group>"; };
 		36A5457621FABC100066A9D4 /* ZZCAutoLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCAutoLock.h; sourceTree = "<group>"; };
-		36CE0A8C21D76948008DF092 /* ZZCURLConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCURLConfigure.h; sourceTree = "<group>"; };
-		36CE0A8D21D76948008DF092 /* ZZCURLConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCURLConfigure.m; sourceTree = "<group>"; };
+		36B38FBF2226BBFA006C0E92 /* ZZCHTTPCompletionDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCHTTPCompletionDataModel.h; sourceTree = "<group>"; };
+		36B38FC02226BBFA006C0E92 /* ZZCHTTPCompletionDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCHTTPCompletionDataModel.m; sourceTree = "<group>"; };
+		36B38FC32226C976006C0E92 /* ZZCMenuItemList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCMenuItemList.h; sourceTree = "<group>"; };
+		36B38FC42226C976006C0E92 /* ZZCHomeBaseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCHomeBaseInfo.h; sourceTree = "<group>"; };
+		36B38FC52226C976006C0E92 /* ZZCBannerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCBannerInfo.m; sourceTree = "<group>"; };
+		36B38FC62226C976006C0E92 /* ZZCMenuItemList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCMenuItemList.m; sourceTree = "<group>"; };
+		36B38FC72226C976006C0E92 /* ZZCHomeBaseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCHomeBaseInfo.m; sourceTree = "<group>"; };
+		36B38FC82226C976006C0E92 /* ZZCBannerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCBannerInfo.h; sourceTree = "<group>"; };
+		36C1753B2236159A0066A664 /* ZZCHTTPServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCHTTPServer.h; sourceTree = "<group>"; };
+		36C1753C2236159A0066A664 /* ZZCHTTPServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCHTTPServer.m; sourceTree = "<group>"; };
+		36C1753E22361A9D0066A664 /* ZZCHTTPServer+Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZZCHTTPServer+Home.h"; sourceTree = "<group>"; };
+		36C1753F22361A9D0066A664 /* ZZCHTTPServer+Home.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZZCHTTPServer+Home.m"; sourceTree = "<group>"; };
 		36CE0A8F21D7C542008DF092 /* ZZCHTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCHTTP.h; sourceTree = "<group>"; };
 		36D114192201A35B005D6856 /* zjq_home_static_details */ = {isa = PBXFileReference; lastKnownFileType = text; path = zjq_home_static_details; sourceTree = "<group>"; };
+		36EC70122227DD6E00939791 /* NSData+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
+		36EC70132227DD6E00939791 /* UIDevice+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+User.m"; sourceTree = "<group>"; };
+		36EC70142227DD6E00939791 /* UIDevice+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+User.h"; sourceTree = "<group>"; };
+		36EC70152227DD6E00939791 /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
+		36EC70182228DB8200939791 /* ZZCHTTPSession+TantuApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZZCHTTPSession+TantuApi.h"; sourceTree = "<group>"; };
+		36EC70192228DB8200939791 /* ZZCHTTPSession+TantuApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZZCHTTPSession+TantuApi.m"; sourceTree = "<group>"; };
 		446EEB885B02B7562EFEBB62 /* Pods-ZZCURLManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZCURLManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZZCURLManagement/Pods-ZZCURLManagement.release.xcconfig"; sourceTree = "<group>"; };
 		B50023F584554C76C31F009C /* Pods-ZZCURLManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZCURLManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZCURLManagement/Pods-ZZCURLManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		F6C1A26D6D36A794807F0B9A /* Pods_ZZCURLManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZCURLManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +143,8 @@
 				36CE0A8F21D7C542008DF092 /* ZZCHTTP.h */,
 				36A5457621FABC100066A9D4 /* ZZCAutoLock.h */,
 				36A5457521FABC100066A9D4 /* ZZCAutoLock.mm */,
+				36C1753B2236159A0066A664 /* ZZCHTTPServer.h */,
+				36C1753C2236159A0066A664 /* ZZCHTTPServer.m */,
 				36A5457821FB15A70066A9D4 /* ZZCURLLoadManagement */,
 				36A5456B21FABBF90066A9D4 /* ZZCURLManagement */,
 			);
@@ -157,10 +180,12 @@
 				36906EDD21CB408A00C1AED1 /* AppDelegate.m */,
 				36906EDF21CB408A00C1AED1 /* ViewController.h */,
 				36906EE021CB408A00C1AED1 /* ViewController.m */,
-				367AD93122007FBC0020E425 /* modelsssss.h */,
-				367AD93222007FBC0020E425 /* modelsssss.m */,
-				36CE0A8C21D76948008DF092 /* ZZCURLConfigure.h */,
-				36CE0A8D21D76948008DF092 /* ZZCURLConfigure.m */,
+				36C1753E22361A9D0066A664 /* ZZCHTTPServer+Home.h */,
+				36C1753F22361A9D0066A664 /* ZZCHTTPServer+Home.m */,
+				36EC70182228DB8200939791 /* ZZCHTTPSession+TantuApi.h */,
+				36EC70192228DB8200939791 /* ZZCHTTPSession+TantuApi.m */,
+				36EC70112227DD6E00939791 /* Unit */,
+				36B38FC22226C976006C0E92 /* Model */,
 				36D114112201A014005D6856 /* FakeJsonStringFile */,
 				36265FC021D6236F00B8EB35 /* ZZCHTTPManager */,
 				36906EE221CB408A00C1AED1 /* Main.storyboard */,
@@ -214,8 +239,23 @@
 				367AD92C22007F270020E425 /* ZZCHTTPSession.m */,
 				367AD92A22007F270020E425 /* ZZCHTTPSessionSignal.h */,
 				367AD92722007F270020E425 /* ZZCHTTPSessionSignal.m */,
+				36B38FBF2226BBFA006C0E92 /* ZZCHTTPCompletionDataModel.h */,
+				36B38FC02226BBFA006C0E92 /* ZZCHTTPCompletionDataModel.m */,
 			);
 			path = ZZCURLLoadManagement;
+			sourceTree = "<group>";
+		};
+		36B38FC22226C976006C0E92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36B38FC82226C976006C0E92 /* ZZCBannerInfo.h */,
+				36B38FC52226C976006C0E92 /* ZZCBannerInfo.m */,
+				36B38FC42226C976006C0E92 /* ZZCHomeBaseInfo.h */,
+				36B38FC72226C976006C0E92 /* ZZCHomeBaseInfo.m */,
+				36B38FC32226C976006C0E92 /* ZZCMenuItemList.h */,
+				36B38FC62226C976006C0E92 /* ZZCMenuItemList.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		36D114112201A014005D6856 /* FakeJsonStringFile */ = {
@@ -224,6 +264,17 @@
 				36D114192201A35B005D6856 /* zjq_home_static_details */,
 			);
 			path = FakeJsonStringFile;
+			sourceTree = "<group>";
+		};
+		36EC70112227DD6E00939791 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				36EC70152227DD6E00939791 /* NSData+Encryption.h */,
+				36EC70122227DD6E00939791 /* NSData+Encryption.m */,
+				36EC70142227DD6E00939791 /* UIDevice+User.h */,
+				36EC70132227DD6E00939791 /* UIDevice+User.m */,
+			);
+			path = Unit;
 			sourceTree = "<group>";
 		};
 		7046719D0DE97D92FDA1C83A /* Pods */ = {
@@ -398,20 +449,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZZCURLManagement/Pods-ZZCURLManagement-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/ZZCDevelopKit/ZZCDevelopKit.framework",
+				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZCDevelopKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -425,17 +470,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36C1753D2236159A0066A664 /* ZZCHTTPServer.m in Sources */,
 				367AD93022007F270020E425 /* ZZCHTTPSession.m in Sources */,
 				36906EE121CB408A00C1AED1 /* ViewController.m in Sources */,
 				36906EEC21CB408C00C1AED1 /* main.m in Sources */,
+				36B38FCA2226C976006C0E92 /* ZZCMenuItemList.m in Sources */,
+				36EC70172227DD6E00939791 /* UIDevice+User.m in Sources */,
+				36B38FCB2226C976006C0E92 /* ZZCHomeBaseInfo.m in Sources */,
 				36A5457321FABBF90066A9D4 /* ZZCURLManagement.m in Sources */,
+				36EC70162227DD6E00939791 /* NSData+Encryption.m in Sources */,
 				367AD92D22007F270020E425 /* ZZCHTTPRequestMaker.m in Sources */,
+				36B38FC12226BBFA006C0E92 /* ZZCHTTPCompletionDataModel.m in Sources */,
 				367AD92F22007F270020E425 /* ZZCHTTPRequestConfig.m in Sources */,
-				367AD93322007FBC0020E425 /* modelsssss.m in Sources */,
+				36B38FC92226C976006C0E92 /* ZZCBannerInfo.m in Sources */,
 				367AD92E22007F270020E425 /* ZZCHTTPSessionSignal.m in Sources */,
+				36C1754022361A9D0066A664 /* ZZCHTTPServer+Home.m in Sources */,
 				36A5457421FABBF90066A9D4 /* ZZCURLBaseItem.m in Sources */,
-				36CE0A8E21D76948008DF092 /* ZZCURLConfigure.m in Sources */,
 				36A5457221FABBF90066A9D4 /* ZZCURLRelativeItem.m in Sources */,
+				36EC701A2228DB8200939791 /* ZZCHTTPSession+TantuApi.m in Sources */,
 				36906EDE21CB408A00C1AED1 /* AppDelegate.m in Sources */,
 				36A5457721FABC100066A9D4 /* ZZCAutoLock.mm in Sources */,
 			);
@@ -610,7 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVNM4ESZ25;
+				DEVELOPMENT_TEAM = UN4656TH2V;
 				INFOPLIST_FILE = ZZCURLManagement/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,7 +681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVNM4ESZ25;
+				DEVELOPMENT_TEAM = UN4656TH2V;
 				INFOPLIST_FILE = ZZCURLManagement/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

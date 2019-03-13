@@ -8,15 +8,54 @@
 
 #import <Foundation/Foundation.h>
 #import "ZZCHTTPRequestConfig.h"
+#import "ZZCHTTPRequestMaker.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZZCHTTPSessionSignal : NSObject
 
-- (instancetype)initWithComfig:(ZZCHTTPRequestConfig *)requestConfig;
+/**
+ 创建请求signal
+ 
+ @param makeBlock 配置请求
+ @return signal
+ */
+- (instancetype)initWithUrlId:(NSString *)urlId maker:(void(^)(ZZCHTTPRequestMaker *make))makeBlock;
 
+/**
+ 类方法
+ */
++ (ZZCHTTPSessionSignal *)signalWithUrlId:(NSString *)urlId maker:(void(^)(ZZCHTTPRequestMaker *make))makeBlock;
+
+/**
+ 更新singnal配置
+
+ @param makeBlock 配置请求
+ */
+- (void)updateWithMaker:(void(^)(ZZCHTTPRequestMaker *make))makeBlock;
+
+/**
+ 重写singnal配置
+
+ @param makeBlock 配置请求
+ */
+- (void)remakeWithMaker:(void(^)(ZZCHTTPRequestMaker *make))makeBlock;
+
+/**
+ 重新配置参数
+
+ @param params 参数
+ */
+- (void)setParams:(NSDictionary *)params;
+
+/**
+ 请求
+ */
 - (void)request;
 
+/**
+ 读取缓存
+ */
 - (void)readCache;
 
 /**
@@ -26,14 +65,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)fakeRequestDelay:(float)delay;
 
+/**
+ 请求配置
+ */
 @property (strong, nonatomic) ZZCHTTPRequestConfig *configure;
 
 /**
  该请求结束，用来控制菊花
  */
-@property (nonatomic, copy) void(^complete)(void);
+@property (nonatomic, copy) void(^complete)(NSInteger code, NSString *msg);
 
 @property (nonatomic, copy) void(^success)(id data,BOOL isCache);
+
+@property (nonatomic, copy) void(^fail)(NSInteger code, NSString *msg);
 
 @property (nonatomic, copy) void(^dataFail)(NSInteger code, NSString *msg);
 

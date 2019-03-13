@@ -6,11 +6,9 @@ target 'ZZCURLManagement' do
   use_frameworks!
 
   # Pods for ZZCURLManagement
-   pod 'ZZCDevelopKit', :git => "ssh://git@120.79.86.56:10022/zuzuche_ios_library/ZZCDevelopKit.git"
-#  pod 'AFNetworking', '~> 3.2.1'
-#  pod 'Masonry', '~> 1.1.0'
-#  pod 'Reachability', '~> 3.2'
-    pod 'MJExtension', '~> 3.0.15.1'
+    pod 'AFNetworking', '~> 3.2.1'
+    pod 'MJExtension'
+    pod 'UICKeyChainStore'
 
   
 end

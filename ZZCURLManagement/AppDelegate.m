@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "ZZCURLConfigure.h"
+#import "ZZCHTTPManager/ZZCHTTP.h"
+#import "UIDevice+User.h"
+#import <AFNetworking/AFNetworking.h>
+
 
 @interface AppDelegate ()
 
@@ -18,7 +21,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [ZZCURLConfigure configure];
+    
+    NSString *ua = [UIDevice httpUserAgent];
+    
+    NSMutableDictionary *baseParams = [NSMutableDictionary dictionary];
+    
+    [baseParams setObject:@"2" forKey:@"_source"];
+    [baseParams setObject:@"5.3.22" forKey:@"_ver"];
+    [baseParams setObject:[UIDevice getMuid] forKey:@"_muid"];
+    NSString *scode = serverCodeByUrl(isProductBuildSetting() ? @"https://m.zuzuche.com/" : @"https://m_main.zuzuche.net/");
+    if (scode)
+    {
+        [baseParams setObject:scode forKey:@"_user_action_id"];
+    }
+    [baseParams setObject:@"zzc" forKey:@"app_type"];
+    [baseParams setObject:@"ios" forKey:@"app_sys"];
+    [baseParams setObject:[UIDevice currentDevice].systemVersion forKey:@"app_sys_ver"];
+    NSString *query = AFQueryStringFromParameters(baseParams);
+    if (!query)
+    {
+        query = @"";
+    }
+    
+    NSDictionary *apiParams = @{@"User-Agent": ua, @"api-common" : query, @"Referer" : @"https://m.zuzuche.com/"};
+    
+    [[ZZCHTTPSession shareInstance] registerHeaderParameter:apiParams];
+    [ZZCHTTPSession shareInstance].debug = !isProductBuildSetting();
     
     return YES;
 }
@@ -52,3 +80,5 @@
 
 
 @end
+
+

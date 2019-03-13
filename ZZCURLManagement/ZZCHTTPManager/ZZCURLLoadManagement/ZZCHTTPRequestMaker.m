@@ -17,19 +17,25 @@
     return self;
 }
 
-- (ZZCHTTPRequestMaker * _Nonnull (^)(NSString * _Nonnull))get{
-    return ^ZZCHTTPRequestMaker  * _Nonnull (NSString *_Nonnull url){
+- (instancetype)initWithOriConfigure:(ZZCHTTPRequestConfig *)oriConfig{
+    if ([super init]) {
+        _requestConfig = oriConfig;
+    }
+    
+    return self;
+}
+
+- (ZZCHTTPRequestMaker * _Nonnull (^)(void))get{
+    return ^ZZCHTTPRequestMaker  * _Nonnull (void){
         self.requestConfig.method = @"GET";
-        self.requestConfig.url_id = url;
         
         return self;
     };
 }
 
-- (ZZCHTTPRequestMaker * _Nonnull (^)(NSString * _Nonnull))post{
-    return ^ZZCHTTPRequestMaker  * _Nonnull (NSString *_Nonnull url){
+- (ZZCHTTPRequestMaker * _Nonnull (^)(void))post{
+    return ^ZZCHTTPRequestMaker  * _Nonnull (void){
         self.requestConfig.method = @"POST";
-        self.requestConfig.url_id = url;
         
         return self;
     };
@@ -67,9 +73,17 @@
     };
 }
 
-- (ZZCHTTPRequestMaker * _Nonnull (^)(void))cache{
-    return ^ZZCHTTPRequestMaker  * _Nonnull (){
-        self.requestConfig.isCache = true;
+- (ZZCHTTPRequestMaker *(^)(ZZCHTTPRequestCachePolicy cachePolicy))cachePolicy{
+    return ^ZZCHTTPRequestMaker  * _Nonnull (ZZCHTTPRequestCachePolicy cachePolicy){
+        self.requestConfig.cachePolicy = cachePolicy;
+        
+        return self;
+    };
+}
+
+- (ZZCHTTPRequestMaker *(^)(NSString *key))uniqueSignKey{
+    return ^ZZCHTTPRequestMaker  * _Nonnull (NSString *uniqueSignKey){
+        self.requestConfig.uniqueSignKey = uniqueSignKey;
         
         return self;
     };

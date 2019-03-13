@@ -11,7 +11,11 @@
 
 #import "ZZCAutoLock.h"
 #import "ZZCURLManagement.h"
+#import "ZZCHTTPCompletionDataModel.h"
+
 #import <MJExtension/MJExtension.h>
+#import <CommonCrypto/CommonDigest.h>
+
 
 static NSRecursiveLock *request_Lock;
 
@@ -24,6 +28,7 @@ typedef void(^completeBlock)(void);
     AFHTTPSessionManager *_sessionManager;
     
     NSMutableDictionary<NSString *,NSDictionary *> *_allCacheInfo;
+    NSMutableDictionary<NSString *,NSDictionary *> *_allOlCacheInfo;
     
     dispatch_queue_t _ioQueue;
     dispatch_queue_t _bindQueue;
@@ -55,6 +60,7 @@ typedef void(^completeBlock)(void);
         
         //初始化
         _allCacheInfo = [NSMutableDictionary dictionary];
+        _allOlCacheInfo = [NSMutableDictionary dictionary];
         _cacheDirec = [NSString stringWithFormat:@"%@/Documents/Caches/",NSHomeDirectory()];
         request_Lock = [[NSRecursiveLock alloc] init];
         _ioQueue = dispatch_queue_create("com.zuzuche.com.ZZCHTTPSession.io", DISPATCH_QUEUE_CONCURRENT);
@@ -86,16 +92,10 @@ typedef void(^completeBlock)(void);
     _bodyParameter = parameter;
 }
 
-- (ZZCHTTPSessionSignal *)createSessionSignal:(void (^)(ZZCHTTPRequestMaker * _Nonnull))makeBlock{
-    ZZCHTTPRequestMaker *maker = [[ZZCHTTPRequestMaker alloc] init];
+- (void)setDebug:(BOOL)debug{
+    _debug = debug;
     
-    if (makeBlock) {
-        makeBlock(maker);
-    }
-    
-    ZZCHTTPSessionSignal *signal = [[ZZCHTTPSessionSignal alloc] initWithComfig:maker.requestConfig];
-    
-    return signal;
+    [[ZZCURLManagement shareInstance] setEnviStateIfDev:debug];
 }
 
 #pragma mark 数据操作
@@ -122,7 +122,7 @@ typedef void(^completeBlock)(void);
         
         return [mutArr copy];
     }else if ([self isKindOfClass:[NSNull class]]){
-        return @"<NSNull>";
+        return @"";
     }else{
         return targetObj;
     }
@@ -155,10 +155,10 @@ typedef void(^completeBlock)(void);
     
 }
 
-- (void)readDataWithUrlId:(NSString *)url_id complete:(void (^)(NSObject *resultData))complete{
+- (void)readDataWithCacheName:(NSString *)cacheName complete:(void (^)(NSObject *resultData))complete{
     dispatch_async(_ioQueue, ^{
         @try{
-            NSString *cacheFile = [NSString stringWithFormat:@"%@/%@",self->_cacheDirec,url_id];
+            NSString *cacheFile = [NSString stringWithFormat:@"%@/%@",self->_cacheDirec,cacheName];
             
             NSData *dataInfo = [NSData dataWithContentsOfFile:cacheFile];
             
@@ -167,10 +167,10 @@ typedef void(^completeBlock)(void);
                     if (complete) {
                         complete([NSKeyedUnarchiver unarchiveObjectWithData:dataInfo]);
                     }
-                }
-                
-                if (complete) {
-                    complete(nil);
+                }else{
+                    if (complete) {
+                        complete(nil);
+                    }
                 }
             });
             
@@ -186,6 +186,21 @@ typedef void(^completeBlock)(void);
     });
 }
 
+- (void)cleanAllOlCacheData{
+    [_allOlCacheInfo removeAllObjects];
+}
+
+- (BOOL)matchIsUrl:(NSString *)url_string{
+    NSString *regEx = @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
+    
+    NSPredicate *card = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regEx];
+    
+    if (([card evaluateWithObject:url_string])) {
+        return YES;
+    }
+    
+    return NO;
+}
 
 @end
 
@@ -195,6 +210,36 @@ typedef void(^completeBlock)(void);
     [ZZCAutoLock zzc_lock:request_Lock];
     
     ZZCHTTPRequestConfig *configure = signal.configure;
+    
+    //是否优先读取ol缓存
+    if (configure.cachePolicy & ZZCHTTPRequestCachePolicyOlCache) {
+        
+        NSString *olCacheName = [self getUniqueCacheNameWithSignal:signal];
+        
+        if ([_allOlCacheInfo.allKeys containsObject:olCacheName]) {
+            if (signal.complete) {
+                signal.complete(0,@"");
+            }
+            
+            if (signal.success) {
+                NSObject *httpModel = signal.configure.httpModel;
+                
+                if (httpModel) {
+                    [httpModel mj_setKeyValues:[_allOlCacheInfo objectForKey:olCacheName] context:nil];
+                    
+                    if (signal.success) {
+                        signal.success(httpModel,true);
+                    }
+                }else{
+                    if (signal.success) {
+                        signal.success([_allOlCacheInfo objectForKey:olCacheName],true);
+                    }
+                }
+            }
+            
+            return;
+        }
+    }
     
     if (configure.dataTask) {
         if (configure.dataTask.state == NSURLSessionTaskStateSuspended) {
@@ -226,17 +271,27 @@ typedef void(^completeBlock)(void);
     
     NSString *urlString = getUrlWithRelativeId(configure.url_id);
     if (urlString == 0) {
-        if (signal.reqFail) {
-            dispatch_async(_sessionManager.completionQueue ?: dispatch_get_main_queue(), ^{
-                signal.reqFail(NSURLErrorUnsupportedURL, [NSString stringWithFormat:@"%@不存在",configure.url_id]);
-            });
+        if ([self matchIsUrl:configure.url_id]) {
+            urlString = configure.url_id;
+        }else{
+            if (signal.reqFail) {
+                dispatch_async(_sessionManager.completionQueue ?: dispatch_get_main_queue(), ^{
+                    signal.reqFail(NSURLErrorUnsupportedURL, [NSString stringWithFormat:@"%@不存在",configure.url_id]);
+                });
+            }
+            
+            if (signal.fail) {
+                dispatch_async(_sessionManager.completionQueue ?: dispatch_get_main_queue(), ^{
+                    signal.fail(NSURLErrorUnsupportedURL, [NSString stringWithFormat:@"%@不存在",configure.url_id]);
+                });
+            }
+            
+            if (signal.complete) {
+                signal.complete(NSURLErrorUnsupportedURL, [NSString stringWithFormat:@"%@不存在",configure.url_id]);
+            }
+            
+            return;
         }
-        
-        if (signal.complete) {
-            signal.complete();
-        }
-
-        return;
     }
 
     NSError *serializationError = nil;
@@ -248,8 +303,14 @@ typedef void(^completeBlock)(void);
             });
         }
         
+        if (signal.fail) {
+            dispatch_async(_sessionManager.completionQueue ?: dispatch_get_main_queue(), ^{
+                signal.fail(serializationError.code, serializationError.localizedDescription);
+            });
+        }
+        
         if (signal.complete) {
-            signal.complete();
+            signal.complete(serializationError.code, serializationError.localizedDescription);
         }
 
         return ;
@@ -274,7 +335,17 @@ typedef void(^completeBlock)(void);
 }
 
 - (void)readCache:(ZZCHTTPSessionSignal *)signal{
-    [self readDataWithUrlId:signal.configure.url_id complete:^(NSObject *resultData) {
+    NSString *cacheName = [self getUniqueCacheNameWithSignal:signal];
+    
+    [self readDataWithCacheName:cacheName complete:^(NSObject *resultData) {
+        if (!resultData) {
+            return;
+        }
+        
+        if (signal.complete) {
+            signal.complete(0,@"");
+        }
+        
         NSObject *httpModel = signal.configure.httpModel;
         
         if (httpModel) {
@@ -346,18 +417,23 @@ typedef void(^completeBlock)(void);
 
 }
 
+#pragma mark 私有方法
 - (void)handleSignal:(ZZCHTTPSessionSignal *)signal responseObject:(id)responseObject error:(NSError *)error{
     NSInteger successCode = getSuccessCodeWithId(signal.configure.url_id);
     
     NSObject *httpModel = [[signal.configure.httpModel class] new];
     
-    if (signal.complete) {
-        signal.complete();
-    }
-    
     if (error) {
+        if (signal.fail) {
+            signal.fail(error.code, error.localizedDescription);
+        }
+        
         if (signal.reqFail) {
             signal.reqFail(error.code, error.localizedDescription);
+        }
+        
+        if (signal.complete) {
+            signal.complete(error.code, error.localizedDescription);
         }
         
         return ;
@@ -384,9 +460,20 @@ typedef void(^completeBlock)(void);
                     }
                 }
                 
-                if (signal.configure.isCache) {
-                    [self->_allCacheInfo setObject:[self processNSNull:dict[@"data"]] forKey:signal.configure.url_id];
+                if (signal.complete) {
+                    signal.complete(0, @"");
                 }
+                
+                NSString *cacheName = [self getUniqueCacheNameWithSignal:signal];
+                
+                if (signal.configure.cachePolicy & ZZCHTTPRequestCachePolicyOlCache) {
+                    [self->_allOlCacheInfo setObject:[self processNSNull:dict[@"data"]] forKey:cacheName];
+                }
+                
+                if (signal.configure.cachePolicy & ZZCHTTPRequestCachePolicyCache) {
+                    [self->_allCacheInfo setObject:[self processNSNull:dict[@"data"]] forKey:cacheName];
+                }
+                
             }else
             {
                 //错误类型
@@ -399,8 +486,16 @@ typedef void(^completeBlock)(void);
                     msg = dict[@"message"];
                 }
                 
+                if (signal.fail) {
+                    signal.fail(code, msg);
+                }
+                
                 if (signal.dataFail) {
                     signal.dataFail(code, msg);
+                }
+                
+                if (signal.complete) {
+                    signal.complete(code, msg);
                 }
             }
         }else
@@ -408,6 +503,10 @@ typedef void(^completeBlock)(void);
             //非标准结构，自己解析
             if (signal.success) {
                 signal.success(responseObject,false);
+            }
+            
+            if (signal.complete) {
+                signal.complete(0, @"");
             }
         }
         
@@ -417,14 +516,64 @@ typedef void(^completeBlock)(void);
         if (signal.success) {
             signal.success(responseObject,false);
         }
+        
+        if (signal.complete) {
+            signal.complete(0, @"");
+        }
     }
 }
 
+- (NSString *)getUniqueCacheNameWithSignal:(ZZCHTTPSessionSignal *)signal{
+    ZZCHTTPRequestConfig *configure = signal.configure;
+    
+    NSString *attach = @"";
+    if (configure.para.count > 0) {
+        if (configure.uniqueSignKey.length > 0 && [configure.para.allKeys containsObject:configure.uniqueSignKey]) {
+            NSDictionary *uniqueSignDic = @{configure.uniqueSignKey : [configure.para objectForKey:configure.uniqueSignKey]};
+            NSString *uniqueSignStr = [self dictionaryToJson:uniqueSignDic];
+            
+            attach = [self MD5Encode:uniqueSignStr];
+        }else{
+            if ([configure.uniqueSignKey isEqualToString:@"ALL"]) {
+                NSString *uniqueSignStr = [self dictionaryToJson:configure.para];
+                
+                attach = [self MD5Encode:uniqueSignStr];
+            }
+        }
+    }
+    
+    return [NSString stringWithFormat:@"%@%@",configure.url_id,attach];
+}
+
+- (NSString *)MD5Encode:(NSString *)str{
+    
+    const char *input = [str UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(input, (CC_LONG)strlen(input), result);
+    
+    NSMutableString *digest = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for (NSInteger i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
+        [digest appendFormat:@"%02x", result[i]];
+    }
+    
+    NSString *md5Str = [digest copy];
+    
+    NSString *string = @"";
+    if (md5Str.length == 32) {
+        string = [md5Str substringWithRange:NSMakeRange(8, 16)];
+    }
+    
+    return string;
+}
+
+- (NSString*)dictionaryToJson:(NSDictionary *)dic
+{
+    NSError *parseError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+
+
 @end
 
-
-@implementation ZZCHTTPCompletionDataModel
-
-
-
-@end

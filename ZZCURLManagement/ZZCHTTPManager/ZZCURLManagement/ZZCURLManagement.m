@@ -232,6 +232,14 @@ static NSRecursiveLock *relativeItemArrOperate_Lock;
 
 
 #pragma mark 环境切换
+- (void)setEnviStateIfDev:(BOOL)dev{
+    if (dev) {
+        _enviState = ZZCURLEnvironmentStateDevelop;
+    }else{
+        _enviState = ZZCURLEnvironmentStateFormal;
+    }
+}
+
 - (void)changeEnviState{
     NSArray<NSString *> *titleArr = @[@"正式环境",@"测试环境",@"自定义环境"];
     

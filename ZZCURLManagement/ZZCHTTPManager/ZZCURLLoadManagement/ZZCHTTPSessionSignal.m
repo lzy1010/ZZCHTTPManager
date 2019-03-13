@@ -12,16 +12,53 @@
 
 @interface ZZCHTTPSessionSignal ()
 
+@property (strong, nonatomic) NSString *urlId;
+
 @end
 
 @implementation ZZCHTTPSessionSignal
 
-- (instancetype)initWithComfig:(ZZCHTTPRequestConfig *)requestConfig{
++ (ZZCHTTPSessionSignal *)signalWithUrlId:(NSString *)urlId maker:(void (^)(ZZCHTTPRequestMaker * _Nonnull))makeBlock{
+    return [[ZZCHTTPSessionSignal alloc] initWithUrlId:urlId maker:makeBlock];
+}
+
+- (instancetype)initWithUrlId:(NSString *)urlId maker:(void (^)(ZZCHTTPRequestMaker * _Nonnull))makeBlock{
     if ([super init]) {
-        self.configure = requestConfig;
+        ZZCHTTPRequestMaker *maker = [[ZZCHTTPRequestMaker alloc] init];
+        
+        if (makeBlock) {
+            makeBlock(maker);
+        }
+        
+        self.configure = maker.requestConfig;
+        self.configure.url_id = urlId;
     }
     
     return self;
+}
+
+- (void)updateWithMaker:(void (^)(ZZCHTTPRequestMaker * _Nonnull))makeBlock{
+    ZZCHTTPRequestMaker *maker = [[ZZCHTTPRequestMaker alloc] initWithOriConfigure:self.configure];
+    
+    if (makeBlock) {
+        makeBlock(maker);
+    }
+    
+    self.configure = maker.requestConfig;
+}
+
+- (void)remakeWithMaker:(void (^)(ZZCHTTPRequestMaker * _Nonnull))makeBlock{
+    ZZCHTTPRequestMaker *maker = [[ZZCHTTPRequestMaker alloc] init];
+    
+    if (makeBlock) {
+        makeBlock(maker);
+    }
+    
+    self.configure = maker.requestConfig;
+}
+
+- (void)setParams:(NSDictionary *)params{
+    self.configure.para = params;
 }
 
 - (void)request{
@@ -34,8 +71,8 @@
 
 - (void)fakeRequestDelay:(float)delay{
     NSString *path = [[NSBundle mainBundle] pathForResource:self.configure.url_id ofType:@""];
-    [self fakeRequestWithFilePath:path delay:delay];
     
+    [self fakeRequestWithFilePath:path delay:delay];
 }
 
 - (void)fakeRequestWithFilePath:(NSString *)filePath delay:(float)delay{
@@ -48,7 +85,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         if (self.complete) {
-            self.complete();
+            self.complete(0,@"");
         }
         
         if (httpModel) {
