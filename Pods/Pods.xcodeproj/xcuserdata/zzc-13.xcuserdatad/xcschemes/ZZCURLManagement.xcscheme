@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68D80169633FF3836510E63EB208DC2C"
-               BlueprintName = "UICKeyChainStore"
+               BlueprintIdentifier = "0CAC27191C008155F8DF831BCBE46BB2"
+               BlueprintName = "ZZCURLManagement"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "UICKeyChainStore.framework">
+               BuildableName = "ZZCURLManagement.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

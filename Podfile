@@ -9,6 +9,7 @@ target 'ZZCURLManagement' do
     pod 'AFNetworking', '~> 3.2.1'
     pod 'MJExtension'
     pod 'UICKeyChainStore'
+    pod 'ZZCURLManagement',:git => 'ssh://git@120.79.86.56:10022/zuzuche_ios_library/ZZCURLManagement.git'
 
   
 end

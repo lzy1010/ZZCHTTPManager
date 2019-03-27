@@ -1,0 +1,35 @@
+{
+  "name": "ZZCURLManagement",
+  "version": "0.0.1",
+  "summary": "租租车URL封装",
+  "description": "租租车网络请求封装",
+  "homepage": "http://m.zuzuche.com",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Blue": "lizhaoyang@zuzuche.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "ssh://git@120.79.86.56:10022/zuzuche_ios_library/ZZCURLManagement.git",
+    "tag": "0.0.1"
+  },
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
+  "requires_arc": true,
+  "dependencies": {
+    "AFNetworking": [
+
+    ],
+    "MJExtension": [
+
+    ]
+  },
+  "source_files": "ZZCURLManagement/LZHTTPManager/**/*.{h,m,mm}"
+}

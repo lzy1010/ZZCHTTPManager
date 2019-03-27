@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ZZCHTTPServer+Home.h"
+#import <ZZCURLManagement/LZHTTP.h>
 
 @implementation ViewController
 
@@ -18,14 +18,6 @@
 }
 
 - (void)addStackView1{
-    [ZZCHTTPServer getHomeBaseInfoSignal].complete = ^(NSInteger code, NSString * _Nonnull msg) {
-        NSLog(@"getHomeBaseInfoSignal  %ld     %@",code,msg);
-    };
-    
-    [ZZCHTTPServer getCurrentRentCarInfoSignal].complete = ^(NSInteger code, NSString * _Nonnull msg) {
-        NSLog(@"getCurrentRentCarInfoSignal   %ld     %@",code,msg);
-    };
-    
     UIStackView *stackView = ({
         UIStackView *stackView = [[UIStackView alloc] init];
         stackView.distribution = UIStackViewDistributionFillEqually;
@@ -37,33 +29,33 @@
     
     stackView.frame = CGRectMake(0, 200, self.view.frame.size.width, 60);
     
-    UIBlockButton *testBtn2 = ({
-        UIBlockButton *btn = [UIBlockButton buttonWithType:UIButtonTypeCustom];
+    UIButton *testBtn1 = ({
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setBackgroundColor:[UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]];
-        [btn setTitle:@"baseInfo" forState:UIControlStateNormal];
-        
-        [btn handleControlEvent:UIControlEventTouchUpInside withBlock:^{
-            [[ZZCHTTPServer getHomeBaseInfoSignal] request];
-        }];
+        [btn addTarget:self action:@selector(testBtnClick1) forControlEvents:UIControlEventTouchUpInside];
+        [btn setTitle:@"haha" forState:UIControlStateNormal];
         
         btn;
     });
     
-    [stackView addArrangedSubview:testBtn2];
-    
-    UIBlockButton *testBtn3 = ({
-        UIBlockButton *btn = [UIBlockButton buttonWithType:UIButtonTypeCustom];
-        [btn setBackgroundColor:[UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]];
-        [btn setTitle:@"currentRentCarInfo" forState:UIControlStateNormal];
-        
-        [btn handleControlEvent:UIControlEventTouchUpInside withBlock:^{
-            [[ZZCHTTPServer getCurrentRentCarInfoSignal] request];
-        }];
-        
-        btn;
-    });
-    
-    [stackView addArrangedSubview:testBtn3];
+    [stackView addArrangedSubview:testBtn1];
+}
+
+- (void)testBtnClick1{
+LZHTTPSessionSignal *signal = [LZHTTPSession creatSignalWithUrl:@"https://m.zuzuche.com/w/book/api/app/faq/index.php" maker:^(LZHTTPRequestMaker * _Nonnull make) {
+    make.get();
+    make.cachePolicy(LZHTTPRequestCachePolicyOlCache);
+}];
+
+signal.complete = ^(NSInteger code, NSString * _Nonnull msg) {
+    NSLog(@"%@",msg);
+};
+
+signal.success = ^(id  _Nonnull data, BOOL isCache) {
+    NSLog(@"%@",data);
+};
+
+[signal request];
 }
 
 @end

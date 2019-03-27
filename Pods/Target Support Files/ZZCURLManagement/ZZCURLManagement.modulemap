@@ -1,0 +1,6 @@
+framework module ZZCURLManagement {
+  umbrella header "ZZCURLManagement-umbrella.h"
+
+  export *
+  module * { export * }
+}

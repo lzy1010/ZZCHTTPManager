@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9116107631A1C485A7380AC15D48765B"
+               BlueprintIdentifier = "3F4652829ABFF5BCC86A547582C22433"
                BuildableName = "Pods_ZZCURLManagement.framework"
                BlueprintName = "Pods-ZZCURLManagement"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9116107631A1C485A7380AC15D48765B"
+            BlueprintIdentifier = "3F4652829ABFF5BCC86A547582C22433"
             BuildableName = "Pods_ZZCURLManagement.framework"
             BlueprintName = "Pods-ZZCURLManagement"
             ReferencedContainer = "container:Pods.xcodeproj">

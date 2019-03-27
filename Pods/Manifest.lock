@@ -16,11 +16,15 @@ PODS:
     - AFNetworking/NSURLSession
   - MJExtension (3.0.15.1)
   - UICKeyChainStore (2.1.2)
+  - ZZCURLManagement (0.0.1):
+    - AFNetworking
+    - MJExtension
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - MJExtension
   - UICKeyChainStore
+  - "ZZCURLManagement (from `ssh://git@120.79.86.56:10022/zuzuche_ios_library/ZZCURLManagement.git`)"
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -28,11 +32,21 @@ SPEC REPOS:
     - MJExtension
     - UICKeyChainStore
 
+EXTERNAL SOURCES:
+  ZZCURLManagement:
+    :git: "ssh://git@120.79.86.56:10022/zuzuche_ios_library/ZZCURLManagement.git"
+
+CHECKOUT OPTIONS:
+  ZZCURLManagement:
+    :commit: 1fff1ab1d116afd771a924581b4e839a5daede38
+    :git: "ssh://git@120.79.86.56:10022/zuzuche_ios_library/ZZCURLManagement.git"
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
+  ZZCURLManagement: c0df50d830a7929632cc8e4421653deaaf7d466a
 
-PODFILE CHECKSUM: d9932f857e6638990a575be94a5d3261b229afea
+PODFILE CHECKSUM: 69876c86a3e83d1f3c26cb70b47d1b111a99082f
 
 COCOAPODS: 1.5.0
